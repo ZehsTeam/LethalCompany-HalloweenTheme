@@ -1,11 +1,13 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
+using com.github.zehsteam.HalloweenTheme.Dependencies;
 using com.github.zehsteam.HalloweenTheme.Patches;
 using HarmonyLib;
 
 namespace com.github.zehsteam.HalloweenTheme;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+[BepInDependency(LethalConfigProxy.PLUGIN_GUID, BepInDependency.DependencyFlags.SoftDependency)]
 internal class Plugin : BaseUnityPlugin
 {
     private readonly Harmony harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
