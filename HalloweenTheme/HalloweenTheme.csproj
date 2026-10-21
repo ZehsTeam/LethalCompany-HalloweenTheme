@@ -40,6 +40,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\README.md" Link="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
     <!-- AssetBundle File -->
     <None Condition="Exists('$(AssetBundleFilePath)')" Include="$(AssetBundleFilePath)" Link="$(AssetBundleFileName)">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
